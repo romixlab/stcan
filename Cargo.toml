@@ -3,6 +3,14 @@ name = "stcan"
 version = "0.1.0"
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+vcell = "0.1"
+vhrdcan = "0.1.0"
+
+[patch.crates-io]
+vhrdcan = { git = "https://github.com/vhrdtech/vhrdcan.git" }
+
+[features]
+g0 = []
+g4 = []
+h7 = []
