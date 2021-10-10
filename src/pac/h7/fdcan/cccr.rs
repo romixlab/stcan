@@ -709,6 +709,6 @@ impl crate::Writable for CCCR_SPEC {
 impl crate::Resettable for CCCR_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0x0000_0003
     }
 }

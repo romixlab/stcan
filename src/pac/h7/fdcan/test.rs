@@ -89,6 +89,18 @@ pub struct TX_W<'a> {
     w: &'a mut W,
 }
 impl<'a> TX_W<'a> {
+    pub fn normal_mode(self) -> &'a mut W {
+        unsafe { self.bits(0b00) }
+    }
+    pub fn sample_point_monitoring(self) -> &'a mut W {
+        unsafe { self.bits(0b01) }
+    }
+    pub fn dominant(self) -> &'a mut W {
+        unsafe { self.bits(0b10) }
+    }
+    pub fn recessive(self) -> &'a mut W {
+        unsafe { self.bits(0b11) }
+    }
     ///Writes raw bits to the field
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {

@@ -55,7 +55,7 @@ pub struct TDCF_W<'a> {
 impl<'a> TDCF_W<'a> {
     ///Writes raw bits to the field
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
         self.w
     }
@@ -111,7 +111,7 @@ impl W {
     }
     ///Writes raw bits to the register.
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+    pub fn bits(&mut self, bits: u32) -> &mut Self {
         self.0.bits(bits);
         self
     }

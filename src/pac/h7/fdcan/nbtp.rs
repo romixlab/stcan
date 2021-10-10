@@ -55,7 +55,7 @@ pub struct NSJW_W<'a> {
 impl<'a> NSJW_W<'a> {
     ///Writes raw bits to the field
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x7f << 25)) | ((value as u32 & 0x7f) << 25);
         self.w
     }
@@ -81,7 +81,7 @@ pub struct NBRP_W<'a> {
 impl<'a> NBRP_W<'a> {
     ///Writes raw bits to the field
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
+    pub fn bits(self, value: u16) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x01ff << 16)) | ((value as u32 & 0x01ff) << 16);
         self.w
     }
@@ -107,7 +107,7 @@ pub struct NTSEG1_W<'a> {
 impl<'a> NTSEG1_W<'a> {
     ///Writes raw bits to the field
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
         self.w
     }
@@ -133,7 +133,7 @@ pub struct NTSEG2_W<'a> {
 impl<'a> NTSEG2_W<'a> {
     ///Writes raw bits to the field
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
         self.w
     }
